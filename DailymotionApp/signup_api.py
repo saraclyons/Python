@@ -49,9 +49,6 @@ def authenticate_user():
 @api.route('/authenticate', methods=['POST'])
 def authenticate_user_post():
     user_passcode = request.form.get('passcode')
-    print(passcode)
-    print(user_passcode)
-    print(authenticate_time())
 
     if user_passcode.strip() == str(passcode).strip() and authenticate_time() > 0:
         try:
